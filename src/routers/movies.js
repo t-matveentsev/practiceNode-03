@@ -3,11 +3,12 @@ import {
   getMoviesByIdController,
   getMoviesController,
 } from "../controllers/movies.js";
+import { ctrlWrapper } from "../utils/ctrlWrapper.js";
 
 const moviesRouter = Router();
 
-moviesRouter.get("/", getMoviesController);
+moviesRouter.get("/", ctrlWrapper(getMoviesController));
 
-moviesRouter.get("/:id", getMoviesByIdController);
+moviesRouter.get("/:id", ctrlWrapper(getMoviesByIdController));
 
 export default moviesRouter;
