@@ -16,7 +16,7 @@ export const startServer = () => {
 
   app.use("/movies", moviesRouter);
 
-  app.use(notFoundHandler);
+  app.use("*", notFoundHandler);
   app.use(errorHandler);
 
   const port = Number(getEnvVar("PORT", 3000));
