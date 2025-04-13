@@ -1,4 +1,7 @@
 import { Router } from "express";
+
+import { ctrlWrapper } from "../utils/ctrlWrapper.js";
+
 import {
   addMovieController,
   deleteMovieController,
@@ -7,7 +10,6 @@ import {
   patchMovieController,
   upsertMovieController,
 } from "../controllers/movies.js";
-import { ctrlWrapper } from "../utils/ctrlWrapper.js";
 
 const moviesRouter = Router();
 
